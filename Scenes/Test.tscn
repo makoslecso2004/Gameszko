@@ -1,12 +1,34 @@
-[gd_scene load_steps=3 format=3 uid="uid://c1x571w4q3l61"]
+[gd_scene load_steps=7 format=3 uid="uid://c1x571w4q3l61"]
 
 [ext_resource type="PackedScene" uid="uid://csvfcf3i2uy6l" path="res://Entities/Caracter.tscn" id="1_0hvu8"]
 [ext_resource type="PackedScene" uid="uid://c62gp0au2qal5" path="res://Entities/Test_Enemy.tscn" id="2_4w5aw"]
+[ext_resource type="Texture2D" uid="uid://cd7yt77i0ktxc" path="res://Art/PlaceholderTile.png" id="3_qpl12"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_x2xpt"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rbt74"]
+texture = ExtResource("3_qpl12")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSet" id="TileSet_m724c"]
+tile_size = Vector2i(32, 32)
+physics_layer_0/collision_layer = 255
+physics_layer_0/collision_mask = 255
+physics_layer_0/physics_material = SubResource("PhysicsMaterial_x2xpt")
+sources/0 = SubResource("TileSetAtlasSource_rbt74")
 
 [node name="Test" type="Node2D"]
 
 [node name="TestEnemy" parent="." instance=ExtResource("2_4w5aw")]
 position = Vector2(1075, 601)
 
-[node name="Caracter" parent="." groups=["player"] instance=ExtResource("1_0hvu8")]
+[node name="Caracter" parent="." instance=ExtResource("1_0hvu8")]
 position = Vector2(294, 152)
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_m724c")
+format = 2
+layer_0/tile_data = PackedInt32Array(0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 12, 0, 0, 13, 0, 0, 14, 0, 0, 15, 0, 0, 16, 0, 0, 17, 0, 0, 18, 0, 0, 19, 0, 0, 20, 0, 0, 65557, 0, 0, 65558, 0, 0, 65559, 0, 0, 65560, 0, 0, 65561, 0, 0, 65562, 0, 0, 65563, 0, 0, 65564, 0, 0, 65565, 0, 0, 65566, 0, 0, 65567, 0, 0, 31, 0, 0, 32, 0, 0, 30, 0, 0, 29, 0, 0, 28, 0, 0, 27, 0, 0, 26, 0, 0, 25, 0, 0, 24, 0, 0, 23, 0, 0, 22, 0, 0, 21, 0, 0, 33, 0, 0, 34, 0, 0, 35, 0, 0, 65571, 0, 0, 131107, 0, 0, 196643, 0, 0, 262179, 0, 0, 327715, 0, 0, 393251, 0, 0, 458787, 0, 0, 524323, 0, 0, 589859, 0, 0, 655395, 0, 0, 720930, 0, 0, 786466, 0, 0, 852002, 0, 0, 917538, 0, 0, 983074, 0, 0, 1048610, 0, 0, 1114146, 0, 0, 1179682, 0, 0, 1179683, 0, 0, 1245219, 0, 0, 1245218, 0, 0, 1245217, 0, 0, 1245216, 0, 0, 1245215, 0, 0, 1245214, 0, 0, 1245213, 0, 0, 1245212, 0, 0, 1245211, 0, 0, 1245210, 0, 0, 1245209, 0, 0, 1245208, 0, 0, 1245207, 0, 0, 1245206, 0, 0, 1245205, 0, 0, 1245204, 0, 0, 1245203, 0, 0, 1245202, 0, 0, 1245201, 0, 0, 1245200, 0, 0, 1245199, 0, 0, 1245198, 0, 0, 1245197, 0, 0, 1245196, 0, 0, 1245195, 0, 0, 1245194, 0, 0, 1245193, 0, 0, 1245192, 0, 0, 1245191, 0, 0, 1245190, 0, 0, 1245189, 0, 0, 1245188, 0, 0, 1245187, 0, 0, 1245186, 0, 0, 1245185, 0, 0, 1245184, 0, 0, 1179648, 0, 0, 1114112, 0, 0, 1048576, 0, 0, 983040, 0, 0, 917504, 0, 0, 851968, 0, 0, 786432, 0, 0, 720896, 0, 0, 655360, 0, 0, 589824, 0, 0, 524288, 0, 0, 458752, 0, 0, 393216, 0, 0, 327680, 0, 0, 262144, 0, 0, 196608, 0, 0, 262143, 0, 0, 196607, 0, 0, 131071, 0, 0, 65535, 0, 0, 65536, 0, 0, 131072, 0, 0, 393223, 0, 0, 458759, 0, 0, 458760, 0, 0, 458761, 0, 0, 458762, 0, 0, 458763, 0, 0, 458764, 0, 0, 393228, 0, 0, 393229, 0, 0, 327693, 0, 0, 262157, 0, 0, 196621, 0, 0, 131085, 0, 0, 131084, 0, 0, 65548, 0, 0, 65547, 0, 0, 65546, 0, 0, 65545, 0, 0, 65544, 0, 0, 65543, 0, 0, 131079, 0, 0, 131078, 0, 0, 196614, 0, 0, 262150, 0, 0, 327686, 0, 0)
