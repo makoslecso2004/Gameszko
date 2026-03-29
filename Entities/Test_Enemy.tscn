@@ -6,12 +6,27 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jsqii"]
 size = Vector2(20, 29)
 
-[node name="TestEnemy" type="CharacterBody2D"]
+[node name="TestEnemy" type="CharacterBody2D" groups=["enemy"]]
+motion_mode = 1
+wall_min_slide_angle = 0.0
 script = ExtResource("1_sn3s5")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_t8ti1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -1.5)
 shape = SubResource("RectangleShape2D_jsqii")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+path_postprocessing = 1
+avoidance_enabled = true
+avoidance_layers = 16
+avoidance_mask = 16
+debug_enabled = true
+
+[node name="Timer" type="Timer" parent="."]
+process_callback = 0
+wait_time = 0.2
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
