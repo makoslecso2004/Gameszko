@@ -17,4 +17,4 @@ func _physics_process(delta):
 		velocity = velocity.move_toward(Vector2.ZERO, speed)
 	
 	# 2. EZ A KULCS: Ez a függvény mozgatja meg a karaktert a 'velocity' alapján
-	move_and_collide(velocity * delta)
+	move_and_slide()
