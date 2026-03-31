@@ -31,6 +31,5 @@ func _physics_process(delta):
 
 
 func _on_timer_timeout():
-	print_debug(room.get_layer_name(0))
 	getPath()
 	pass # Replace with function body.
