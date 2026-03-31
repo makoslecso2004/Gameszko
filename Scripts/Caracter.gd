@@ -1,5 +1,5 @@
 extends CharacterBody2D
-
+@export var inv : Inv
 # 1. Definiáljuk a sebességet, hogy a kód tudja, mi az a 'speed'
 var speed: float = 400.0
 

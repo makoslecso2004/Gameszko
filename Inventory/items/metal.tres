@@ -1,10 +1,9 @@
-[gd_resource type="Resource" script_class="InvItem" load_steps=3 format=3 uid="uid://wy5k1ssw41yo"]
+[gd_resource type="Resource" script_class="InvItem" format=3 uid="uid://wy5k1ssw41yo"]
 
-[ext_resource type="Script" uid="uid://bg3a4xlevob1p" path="res://Inventory/Inventory_item.gd" id="1_7l11u"]
+[ext_resource type="Script" uid="uid://k3re5wgg5gps" path="res://Inventory/Inventory_item.gd" id="1_7l11u"]
 [ext_resource type="Texture2D" uid="uid://i8j1xee5ejgf" path="res://Art/Wood-export.png" id="2_heqwe"]
 
 [resource]
 script = ExtResource("1_7l11u")
 name = "Wood"
 texture = ExtResource("2_heqwe")
-metadata/_custom_type_script = "uid://bg3a4xlevob1p"
