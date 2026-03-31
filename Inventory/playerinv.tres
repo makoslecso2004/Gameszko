@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Inv" load_steps=4 format=3 uid="uid://r76dj888qv5e"]
 
-[ext_resource type="Script" uid="uid://bg3a4xlevob1p" path="res://Inventory/Inventory_item.gd" id="1_j5s0h"]
+[ext_resource type="Script" uid="uid://dxxcvy0u4i3f3" path="res://Inventory/Inventory_item.gd" id="1_j5s0h"]
 [ext_resource type="Resource" uid="uid://wy5k1ssw41yo" path="res://Inventory/items/metal.tres" id="2_7ec12"]
 [ext_resource type="Script" uid="uid://cxluvtnwrcsrs" path="res://Inventory/inventory.gd" id="3_xpsnh"]
 

@@ -3,8 +3,6 @@ extends CharacterBody2D
 # 1. Definiáljuk a sebességet, hogy a kód tudja, mi az a 'speed'
 var speed: float = 400.0
 
-@export var inv: Inv
-
 func _ready():
 	# Ide nem kell semmi extra az induláshoz
 	pass

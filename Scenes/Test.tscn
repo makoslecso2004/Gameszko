@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://c1x571w4q3l61"]
+[gd_scene load_steps=6 format=3 uid="uid://c1x571w4q3l61"]
 
 [ext_resource type="PackedScene" uid="uid://csvfcf3i2uy6l" path="res://Entities/Caracter.tscn" id="1_0hvu8"]
 [ext_resource type="PackedScene" uid="uid://bbjtesulnk0r1" path="res://Rooms/test_exit.tscn" id="1_giu6k"]
+[ext_resource type="PackedScene" uid="uid://cpj8k5pao4jbf" path="res://Menu/MenuRoot.tscn" id="1_ub0fu"]
 [ext_resource type="PackedScene" uid="uid://c62gp0au2qal5" path="res://Entities/Test_Enemy.tscn" id="2_4w5aw"]
 [ext_resource type="PackedScene" uid="uid://dkrtihs7xl78a" path="res://Rooms/test_room.tscn" id="3_8x3kw"]
 
@@ -19,9 +20,9 @@ position = Vector2(294, 152)
 
 [node name="Camera2D" type="Camera2D" parent="Caracter"]
 zoom = Vector2(2, 2)
-limit_left = 0
-limit_top = 0
-limit_right = 1536
-limit_bottom = 928
 position_smoothing_enabled = true
 position_smoothing_speed = 3.0
+
+[node name="Menu" type="CanvasLayer" parent="."]
+
+[node name="MenuRoot" parent="Menu" instance=ExtResource("1_ub0fu")]
