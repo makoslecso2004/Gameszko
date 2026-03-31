@@ -1,0 +1,117 @@
+[gd_scene load_steps=7 format=3 uid="uid://cpj8k5pao4jbf"]
+
+[ext_resource type="Script" path="res://Menu/MenuRoot.gd" id="1_cyam4"]
+[ext_resource type="FontFile" uid="uid://bwlajpl0ipkmy" path="res://Fonts/Pixelmania.ttf" id="1_qbhax"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s1cs1"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vxd26"]
+bg_color = Color(0.201527, 0.201527, 0.201526, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.607843, 0.607843, 0.607843, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ur1a4"]
+bg_color = Color(0.0885599, 0.0885599, 0.0885599, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.607843, 0.607843, 0.607843, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xq3qo"]
+
+[node name="MenuRoot" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cyam4")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -146.5
+offset_top = -167.5
+offset_right = 146.5
+offset_bottom = 167.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 15
+
+[node name="Start" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.607843, 0.607843, 0.607843, 1)
+theme_override_colors/font_hover_color = Color(0.60933, 0.60933, 0.60933, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_qbhax")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_s1cs1")
+theme_override_styles/hover = SubResource("StyleBoxFlat_vxd26")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ur1a4")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_xq3qo")
+text = "START
+"
+
+[node name="Options" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.607843, 0.607843, 0.607843, 1)
+theme_override_colors/font_hover_color = Color(0.60933, 0.60933, 0.60933, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_qbhax")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_s1cs1")
+theme_override_styles/hover = SubResource("StyleBoxFlat_vxd26")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ur1a4")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_xq3qo")
+text = "OTIONS"
+
+[node name="Exit" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.607843, 0.607843, 0.607843, 1)
+theme_override_colors/font_hover_color = Color(0.60933, 0.60933, 0.60933, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_qbhax")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_s1cs1")
+theme_override_styles/hover = SubResource("StyleBoxFlat_vxd26")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ur1a4")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_xq3qo")
+text = "EXIT"
+
+[connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="VBoxContainer/Exit" to="." method="_on_exit_pressed"]
