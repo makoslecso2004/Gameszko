@@ -5,6 +5,7 @@ var knockback = 0
 var player: Node2D
 
 @onready var navi := $NavigationAgent2D as NavigationAgent2D
+@onready var room := $"../TestRoom/TileMap" as TileMap
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	var players = get_tree().get_nodes_in_group("player")
