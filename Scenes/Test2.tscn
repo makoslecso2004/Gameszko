@@ -1,23 +1,23 @@
-[gd_scene load_steps=5 format=3 uid="uid://c44oehi0h2dvg"]
+[gd_scene format=3 uid="uid://c44oehi0h2dvg"]
 
 [ext_resource type="PackedScene" uid="uid://dkrtihs7xl78a" path="res://Rooms/test_room.tscn" id="1_1oiqn"]
 [ext_resource type="PackedScene" uid="uid://bbjtesulnk0r1" path="res://Rooms/test_exit.tscn" id="2_117iv"]
 [ext_resource type="PackedScene" uid="uid://csvfcf3i2uy6l" path="res://Entities/Caracter.tscn" id="3_6cs22"]
 [ext_resource type="PackedScene" uid="uid://c62gp0au2qal5" path="res://Entities/Test_Enemy.tscn" id="4_ud1da"]
 
-[node name="Test2" type="Node2D"]
+[node name="Test2" type="Node2D" unique_id=1020230942]
 
-[node name="TestExit" parent="." instance=ExtResource("2_117iv")]
+[node name="TestExit" parent="." unique_id=383351113 instance=ExtResource("2_117iv")]
 
-[node name="TestRoom" parent="." instance=ExtResource("1_1oiqn")]
+[node name="TestRoom" parent="." unique_id=1005296572 instance=ExtResource("1_1oiqn")]
 position = Vector2(-176, -161)
 
-[node name="Caracter" parent="." instance=ExtResource("3_6cs22")]
+[node name="Caracter" parent="." unique_id=336411222 instance=ExtResource("3_6cs22")]
 position = Vector2(240, 176)
 
-[node name="Camera2D" type="Camera2D" parent="Caracter"]
+[node name="Camera2D" type="Camera2D" parent="Caracter" unique_id=985206810]
 zoom = Vector2(2, 2)
 position_smoothing_enabled = true
 
-[node name="TestEnemy" parent="." instance=ExtResource("4_ud1da")]
+[node name="TestEnemy" parent="." unique_id=332372038 instance=ExtResource("4_ud1da")]
 position = Vector2(559, 369)
