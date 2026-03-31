@@ -1,13 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://csvfcf3i2uy6l"]
+[gd_scene load_steps=6 format=3 uid="uid://csvfcf3i2uy6l"]
 
 [ext_resource type="Script" uid="uid://6s3n7m653eu3" path="res://Scripts/Caracter.gd" id="1_q8qcg"]
+[ext_resource type="Resource" uid="uid://r76dj888qv5e" path="res://Inventory/playerinv.tres" id="2_alfr7"]
 [ext_resource type="Texture2D" uid="uid://du4t33h2d8yip" path="res://Art/Placeholder.png" id="2_qj431"]
+[ext_resource type="PackedScene" uid="uid://jvcnj4ipfggt" path="res://Inventory/inv_ui.tscn" id="4_svs7o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uq3wb"]
 size = Vector2(25, 29)
 
 [node name="Caracter" type="CharacterBody2D" groups=["player"]]
 script = ExtResource("1_q8qcg")
+inv = ExtResource("2_alfr7")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_qj431")
@@ -15,3 +18,9 @@ texture = ExtResource("2_qj431")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.5, 1.5)
 shape = SubResource("RectangleShape2D_uq3wb")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Inv_UI" parent="CanvasLayer" instance=ExtResource("4_svs7o")]
+scale = Vector2(2, 2)
+pivot_offset = Vector2(92, 73)

@@ -18,3 +18,6 @@ func _physics_process(delta):
 	
 	# 2. EZ A KULCS: Ez a függvény mozgatja meg a karaktert a 'velocity' alapján
 	move_and_slide()
+	
+	
+	
